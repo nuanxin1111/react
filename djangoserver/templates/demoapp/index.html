@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>hello react</title>
+	<script src="{% static 'js/build/react.min.js' %}"></script>
+	<script src="{% static 'js/build/react-dom.min.js' %}"></script>
+
+	<script src="{% static 'js/build/jquery.min.js' %}"></script>
+
+	<script src="{% static 'js/materialize.min.js' %}"></script>
+	<!--
+	<link rel="stylesheet" type="text/css" href="{% static 'css/app.css' %}">
+	-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/materialize.min.css' %}">
+
+	 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+	<div class="container">       
+		<i class="material-icons">add</i>
+		<i class="large material-icons">insert_chart</i>
+		<div id="example"></div>
+	</div>
+
+	<script src="{% static 'js/lib/main.js' %}"></script>
+</body>
+</html>
