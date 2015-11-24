@@ -5,7 +5,7 @@ export default class Hello extends React.Component {
   render() {
     return (
     	<div className="Myappimg">
-	    	<h1 >Hello xwp aa world</h1>
+	    	<h1 >Hello xwp  world</h1>
     	</div>
   	);
   }

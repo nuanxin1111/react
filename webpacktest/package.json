@@ -6,6 +6,7 @@
   "scripts": {
     "build": "webpack",
     "dev": "webpack-dev-server --devtool eval --progress --colors --hot --content-base build",
+    "deploy": "NODE_ENV=production webpack -p --config webpack.production.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

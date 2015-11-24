@@ -4,8 +4,6 @@ var node_modules_dir = path.resolve(__dirname, 'node_modules');
 var config = {
   entry: {
     bundle: [
-    'webpack/hot/dev-server',
-    'webpack-dev-server/client?http://localhost:8080',
     path.resolve(__dirname, 'app/main.js'),
     ]
   },
