@@ -110,7 +110,6 @@ class CommentForm extends React.Component {
 		return (
 			<form className="comment-form" ref="form" onSubmit={e => {this.handleSubmit(e)}}>
 			<input type="text" placeholder="Your name" className="validate" ref="author" />
-			<input type="text" placeholder="Input your comment" ref="whatsay" />
 			<input type="submit"  className="waves-effect waves-light btn" value="Add comment"/>
 			</form>
 		);
