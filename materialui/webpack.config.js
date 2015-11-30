@@ -5,7 +5,7 @@ var config = {
   entry: {
     bundle: [
     'webpack/hot/dev-server',
-    'webpack-dev-server/client?http://localhost:8080',
+    'webpack-dev-server/client?http://0.0.0.0:8080',
     path.resolve(__dirname, 'app/app.js'),
     ]
   },
