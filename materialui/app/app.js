@@ -5,7 +5,6 @@ import './global.css';
 
 import CommentBox from './mycomment';
 
-import RaisedButton from 'material-ui/lib/raised-button';
 import Tab from 'material-ui/lib/tabs/tab';
 import Tabs from 'material-ui/lib/tabs/tabs';
 
@@ -22,6 +21,27 @@ import { SelectableContainerEnhance } from 'material-ui/lib/hoc/selectable-enhan
 
 const GridList = require('material-ui/lib/grid-list/grid-list');
 const GridTile = require('material-ui/lib/grid-list/grid-tile');
+
+
+const Card = require('material-ui/lib/card/card');
+const CardActions = require('material-ui/lib/card/card-actions');
+const CardExpandable = require('material-ui/lib/card/card-expandable');
+const CardHeader = require('material-ui/lib/card/card-header');
+const CardMedia = require('material-ui/lib/card/card-media');
+const CardText = require('material-ui/lib/card/card-text');
+const CardTitle = require('material-ui/lib/card/card-title');
+
+
+const Checkbox = require('material-ui/lib/checkbox');
+const RadioButton = require('material-ui/lib/radio-button');
+const RadioButtonGroup = require('material-ui/lib/radio-button-group');
+const Toggle = require('material-ui/lib/toggle');
+
+
+const FlatButton = require('material-ui/lib/flat-button');
+const RaisedButton = require('material-ui/lib/raised-button');
+const FloatingActionButton = require('material-ui/lib/floating-action-button');
+
 
 //import 'jquery'
 
@@ -122,8 +142,9 @@ class App extends React.Component {
                                   style={{width: 320, height: 640, overflowY: 'auto'}}
                                   >
                                   {
-                                    tilesData.map(tile => <GridTile
+                                    tilesData.map((tile,index) => <GridTile
                                       title={tile.title}
+                                      key = {'list-'+index}
                                       subtitle={<span>by <b>{tile.author}</b></span>}
                                       ><img src={tile.img} /></GridTile>)
                                   }
@@ -133,11 +154,52 @@ class App extends React.Component {
                           <Tab label="应用切换" >
                                 <h1>test</h1>
                                     <Tabs>
-                                        <Tab label="aaa">
-                                            <h1>11111</h1>
+                                        <Tab label="card测试">
+                                            <h1>card里的元素可以自由组合</h1>
+                                              <Card>
+                                                <CardHeader
+                                                  title="Title"
+                                                  subtitle="Subtitle"
+                                                  avatar={<Avatar>A</Avatar>}/>
+                                                <CardHeader
+                                                  title="Demo Url Based Avatar"
+                                                  subtitle="Subtitle"
+                                                  avatar="http://lorempixel.com/100/100/nature/"/>
+                                                <CardMedia overlay={<CardTitle title="Title" subtitle="Subtitle"/>}>
+                                                  <img src="http://lorempixel.com/600/337/nature/"/>
+                                                </CardMedia>
+                                                <CardTitle title="Title" subtitle="Subtitle"/>
+                                                <CardText>
+                                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                  Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
+                                                  Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
+                                                  Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
+                                                </CardText>
+                                              </Card>
+
                                         </Tab>
-                                        <Tab label="bbb">
-                                            <h1>22222</h1>
+                                        <Tab label="单选测试">
+
+                                            <h1>单选选择后触发alert</h1>
+                                            <RadioButtonGroup name="shipSpeed" defaultSelected="111">
+                                            <RadioButton
+                                              value="111"
+                                              label="男人"
+                                              style={{marginBottom:16}} />
+                                            <RadioButton
+                                              value="222"
+                                              label="女人"
+                                              style={{marginBottom:16}}/>
+                                            </RadioButtonGroup>
+
+                                            <RaisedButton label="Primary" primary={true} />
+
+                                            <RaisedButton label="点我触发alert" secondary={true} />
+
+                                            <RaisedButton label="这个按钮的字体和背景色自己设置" backgroundColor="Purple" labelColor="Orange"/>
+
+                                            <RaisedButton label="这个按钮的字体和背景色自己设置"  backgroundColor="deepOrange50" labelColor="Orange"/>
+
                                         </Tab>
                                         <Tab label="ccc">
                                             <h1>33333</h1>
