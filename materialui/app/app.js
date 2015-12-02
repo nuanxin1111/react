@@ -136,7 +136,11 @@ class App extends React.Component {
     return (
       <div>
 
-      <Tabs tabItemContainerStyle={{bottom:0, position:'absolute', zindex:100}}>
+      <Tabs 
+        tabItemContainerStyle={{bottom:0, position:'absolute', zIndex:10}}
+        inkBarStyle={{width:0}}
+      >
+
       <Tab label="药品图片" >
       <GridList
       cellHeight={200}
@@ -153,7 +157,6 @@ class App extends React.Component {
       </Tab>
 
       <Tab label="应用切换" >
-      <h1>test</h1>
       <Tabs>
       <Tab label="card测试">
       <h1>card里的元素可以自由组合</h1>
