@@ -137,7 +137,7 @@ class App extends React.Component {
       <div>
 
       <Tabs 
-        tabItemContainerStyle={{bottom:0, position:'absolute', zIndex:10}}
+        tabItemContainerStyle={{bottom:0, position:'absolute', zIndex:1000}}
         inkBarStyle={{width:0}}
       >
 
